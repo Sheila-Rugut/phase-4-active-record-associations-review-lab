@@ -1,6 +1,9 @@
 class CreateRides < ActiveRecord::Migration[6.1]
   def change
     create_table :rides do |t|
+      t.integer :number
+      t.belongs_to :passenger
+      t.belongs_to :taxi
 
       t.timestamps
     end
